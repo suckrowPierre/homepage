@@ -15,5 +15,8 @@
     "elysia": "^0.8.17",
     "elysiahyperkit": "link:elysiahyperkit",
     "typed-html": "link:typed-html"
+  },
+  "scripts": {
+    "refreshCache": "bun src/refreshCache.ts"
   }
 }

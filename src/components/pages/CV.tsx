@@ -161,19 +161,19 @@ const Programming = () => (
             </tr>
             <tr>
                 <td>Java</td>
-                <td>-</td>
+                <td></td>
             </tr>
             <tr>
                 <td>GraphQL</td>
-                <td>-</td>
+                <td></td>
             </tr>
             <tr>
                 <td>HTML/CSS</td>
-                <td>-</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Shell</td>
-                <td>-</td>
+                <td></td>
             </tr>
             </tbody>
         </CVTable>
@@ -299,9 +299,9 @@ export const Publications = () => (
 
 export const CV = () => (
     <ContentFrame>
-        <div class="text-base h-full overflow-visible flex flex-col lg:flex-row-reverse">
+        <div class="text-base h-full overflow-auto flex flex-col lg:flex-row-reverse">
             <div class="w-full lg:max-w-[400px]">
-                <InfoBlock class={"block md:hidden"}>
+                <InfoBlock class={"block lg:hidden"}>
                     <Divider/>
                 </InfoBlock>
                 <div>

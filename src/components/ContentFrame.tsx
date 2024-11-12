@@ -7,7 +7,7 @@ export const ContentFrame = ({children}: {children: any}) => {
     return (
         <MainDiv>
             <BackLink/>
-            <div class="pt-4 relative h-full">
+            <div class="pt-4 relative h-full overflow-hidden">
                 {children}
             </div>
         </MainDiv>

@@ -7,8 +7,8 @@ import {routes} from "./routes/routes";
 const appParams: AppParams = {
     port: 3000,
     staticDir: true,
-    hyperScript: false,
-    siteType: SiteType.STATIC,
+    hyperScript: true,
+    siteType: SiteType.HTMX,
 }
 
 const app = new App(appParams).use(tailwind({
