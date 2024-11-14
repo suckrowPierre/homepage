@@ -18,7 +18,7 @@
     }
 
     .nav-link {
-        @apply underline text-left;
+        @apply text-left;
         @apply betterhover:hover:no-underline;
         @apply cursor-pointer;
         @apply text-lg pb-2 uppercase;

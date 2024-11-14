@@ -1,11 +1,11 @@
 function loadMacy() {
-    console.log("Loading Macy.js grid...");
 
     const grid = document.getElementById('photo-grid');
     if (!grid) {
         console.error("Element with ID 'photo-grid' not found.");
         return;
     }
+    const numberOfColumns = 4;
 
     const macyInstance = Macy({
         container: '#photo-grid',
@@ -15,13 +15,47 @@ function loadMacy() {
             x: "4%",
             y: 0,
         },
-        columns: 4,
+        breakAt: {
+            768: numberOfColumns - 2,
+            1024: numberOfColumns - 1,
+        },
+        columns: numberOfColumns,
     });
 
     macyInstance.runOnImageLoad(function () {
         macyInstance.recalculate(true);
     }, true);
+
+    function recalculateGrid() {
+        macyInstance.recalculate(true);
+    }
+
+    function decrementColumns() {
+        if (numberOfColumns > 1) {
+            macyInstance.options.columns = numberOfColumns - 1;
+            macyInstance.options.breakAt = {
+                768: numberOfColumns - 3,
+                1024: numberOfColumns - 2,
+            }
+            recalculateGrid();
+        }
+    }
+
+    function resetColumns() {
+        macyInstance.options.columns = numberOfColumns;
+        macyInstance.options.breakAt = {
+            768: numberOfColumns - 2,
+            1024: numberOfColumns - 1,
+        }
+        recalculateGrid();
+    }
+
+    window.recalculateGrid = recalculateGrid;
+    window.decrementColumns = decrementColumns;
+    window.resetColumns = resetColumns;
 }
+
+
 
 window.addEventListener('load', () => {
     loadMacy();

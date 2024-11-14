@@ -4,8 +4,7 @@ import {LandingPage} from "../components/pages/LandingPage";
 import {SiteFrame} from "../components/SiteFrame";
 import {CV} from "../components/pages/CV";
 import {Photography, SinglePhotoView} from "../components/pages/Photography";
-import {findMediaFromPath, isPathInCache, photographyCache} from "../data/imageCache";
-import {photoAndVideoPage} from "../routes/routes";
+import {findMediaFromPath} from "../data/imageCache";
 
 
 export const serviceBluePrint = async (HtmlToShow,...args) => {
@@ -43,7 +42,6 @@ export const legalService = async (...args) => {
 }
 
 export const photographyService = async (...args) => {
-    //const photoList = await getAllFileNamesFromFolderInBucket("photography");
     return serviceBluePrint(Photography, ...args);
 }
 
@@ -51,7 +49,6 @@ export const imageViewService = async (...args) => {
     if (args.length > 0) {
         const serviceArgs: ServiceParams = destructServiceArgs(args);
         const imagePath = serviceArgs.params["*"];
-        console.log(imagePath);
 
         if (!imagePath.endsWith(".jpg") && !imagePath.endsWith(".png")) {
             throw new Error("Invalid image name");
