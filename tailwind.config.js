@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fancy: ['Palace Script MT', 'cursive'],
-        sans: ['"Times New Roman"', 'serif'],
+        sans: ['Helvetica Neue', 'serif'],
       },
       screens: {
         'betterhover': {'raw': '(hover: hover)'},

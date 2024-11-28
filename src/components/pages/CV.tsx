@@ -5,7 +5,7 @@ import {Attributes} from "typed-html";
 
 const CVTableLength = 200;
 
-const textClassesTimeLine = "text-xl";
+const textClassesTimeLine = "";
 const Divider = () => (
     <hr class="my-4 border-black"/>
 )

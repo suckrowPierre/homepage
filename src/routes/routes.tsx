@@ -5,10 +5,10 @@ import {
     legalService,
     photographyService,
     projectService,
-    serviceBluePrint
 } from "../services/services";
-import {ProjectType} from "../components/projects/projects";
+import {ProjectType, projectTypes} from "../components/projects/projects";
 import * as elements from "typed-html";
+import {ProjectsSite} from "../components/pages/ProjectSite";
 
 //pages
 
@@ -18,15 +18,15 @@ export const legal = new Page("/legal", legalService, "Legal Notice", true);
 
 export const projectPages: Route[] = [];
 
+export const photoAndVideoPage = new Page("/photography", photographyService, "Photography", true);
+projectPages.push(photoAndVideoPage);
 
-Object.entries(ProjectType).forEach(([name, value]) => {
-    if (ProjectType.PhotoAndVideo === value) return;
-    const HtmlToShow = () => (<p>{value}</p>);
-    const projectPage = new Page(`/${name.toLowerCase()}`, projectService, value, true, HtmlToShow);
+projectTypes.forEach(projectType => {
+    const HtmlToShow = () => (<ProjectsSite projectType={projectType}/>);
+    const projectPage = new Page(projectType.endpoint, projectService, projectType.name, true, HtmlToShow);
     projectPages.push(projectPage);
 });
-export const photoAndVideoPage = new Page("/photography", photographyService, ProjectType.PhotoAndVideo, true);
-projectPages.push(photoAndVideoPage);
+
 
 export const nonProjectPages: Route[] = [homepage, cvPage];
 

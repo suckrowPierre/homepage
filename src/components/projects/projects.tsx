@@ -1,19 +1,26 @@
 import * as elements from "typed-html";
+import {Research} from "../pages/projects/Research";
 
-export enum ProjectType {
-    Research = "Artistic based Research",
-    PhotoAndVideo = "Photography and Videography",
-    Sound = "Sounddesign",
-    Software = "Software Development",
-    Web = "Web Design and Development"
-}
-
-export class Project {
+export class ProjectType {
     constructor(
-        public title: string,
-        public type: ProjectType,
-        public shortDescription: string,
-        public HtmlContent: any
+        public name: string,
+        public endpoint: string,
+        public HtmlContent: any,
     ) {}
 }
+
+export interface Project {
+    title: string;
+    shortDescription: string;
+    links?: {text: string, url: string}[];
+    HtmlContent?: any;
+}
+
+//
+export const projectTypes = [
+    new ProjectType("Artistic based Research","/research",  <Research/>),
+    new ProjectType("Sounddesign", "/sounddesign", undefined),
+    new ProjectType("Software Development", "/software", undefined),
+    new ProjectType("Web Design and Development", "web-design", undefined),
+];
 

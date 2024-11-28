@@ -14,7 +14,7 @@ const ProjectButton = ({ project }: { project?: Project }) => {
 
     return (
         <div class="mr-4 pb-4 md:pb-0">
-            <button class="cursor-pointer betterhover:hover:no-underline" data-project-name={projectName} _={newHyperscript}>
+            <button class="underline cursor-pointer betterhover:hover:no-underline" data-project-name={projectName} _={newHyperscript}>
                 {projectName} ({project ? project.numberOfImages : photographyCache.allNumberOfMedia})
             </button>
         </div>
