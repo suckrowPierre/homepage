@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fancy: ['Palace Script MT', 'cursive'],
+        knight: ['Chomskey'],
         sans: ['Helvetica Neue', 'serif'],
       },
       screens: {

@@ -12,6 +12,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Chomskey';
+    src: url('fonts/Chomsky.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,17 +26,16 @@
 @layer components {
     /*text-[#05f]*/
     .btn-link {
-        @apply underline text-left;
+        @apply text-left;
         @apply betterhover:hover:no-underline;
         @apply cursor-pointer;
     }
 
     .nav-link {
-        @apply text-left;
-        @apply font-normal;
-        @apply underline betterhover:hover:no-underline;
+        @apply font-medium;
+        @apply betterhover:hover:text-gray-700;
         @apply cursor-pointer;
-        @apply text-lg pb-2;
+        @apply text-xl sm:text-2xl;
     }
 }
 
