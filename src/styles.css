@@ -26,6 +26,7 @@
 @layer components {
     /*text-[#05f]*/
     .btn-link {
+        @apply underline;
         @apply text-left;
         @apply betterhover:hover:no-underline;
         @apply cursor-pointer;

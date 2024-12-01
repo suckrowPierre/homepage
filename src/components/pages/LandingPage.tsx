@@ -8,7 +8,7 @@ import {optimizedImagePath} from "../../data/bucketImages";
 
 const Image = () => {
     return (
-        <div class="z-[-10] sm:w-[300px] md:w-[500px]"  >
+        <div class="z-[-10] w-full sm:w-[300px] md:w-[500px]"  >
             <img class="w-full h-full" src={optimizedImagePath("landingPage.jpg", 200,230)}/>
         </div>
 
@@ -25,7 +25,7 @@ const Image = () => {
 export const Title = () => {
     return (
         <div class="
-        text-8xl sm:text-9xl pl-[-2px] mt-[-22px] leading-[5.5rem] sm:leading-[6.5rem] md:pr-8 font-medium w-fit">
+        text-8xl sm:text-9xl pl-[-2px] mt-[-22px] leading-[5.5rem] sm:leading-[6.5rem] md:pr-8 font-medium w-fit cursor-pointer">
                 <p class="font-knight w-fit">Suckrow</p>
                 <p class="font-knight w-fit">Pierre Louis</p>
         </div>

@@ -27,6 +27,7 @@ export const SiteFrame = ({children}: {children: any}) => {
                 <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
                 <script src={'./public/photoMasonry.js'}></script>
                 <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"></script>
+                <link rel="icon" href="/public/cursor.ico" />
                 <LoadMansoryAfterRequest />
             </Head>
             }
