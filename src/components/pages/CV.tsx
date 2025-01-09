@@ -19,7 +19,7 @@ const CVElement = ({children}: {children: any}) => (
 )
 
 const TimeLineTitle = ({children, ...attributes }: Attributes) => (
-    <h2 class="text-xl font-medium pb-4" {...attributes}>
+    <h2 class="text-lg font-bold pb-4" {...attributes}>
         {children}
     </h2>
 )
@@ -131,7 +131,7 @@ const CVTable = ({children, ...attributes }: Attributes) => (
 const InfoBlock = ({children, ...attributes }: Attributes) => (
     <div class="grid grid-cols-1 md:grid-cols-10">
         <div class="col-span-full lg:col-span-4">
-            <p class="text-xl font-medium">Pierre-Louis Suckrow</p>
+            <p class="text-lg font-bold">Pierre-Louis Suckrow</p>
             <p>- Berlin, Germany</p>
             <p>*2000 Gap, France</p>
         </div>

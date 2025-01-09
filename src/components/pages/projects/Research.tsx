@@ -1,7 +1,7 @@
 import * as elements from "typed-html";
 import {
     ProjectElements,
-    ProjectPage,
+    ProjectPage, ProjectSubTitle,
     ProjectTitle
 } from "./Project";
 import {
@@ -12,12 +12,10 @@ import {
 
 const FirstText = () => (
     <div>
-        <h1 class="col-span-full font-bold text-base">Some title</h1>
-    <p class="pt-2">
-        Artistic based researcher with an interest in the intersection of art, science, and technology. <br/>
-        Currently pursuing a master's degree in <a target="_blank" class="btn-link" href="https://www.newpractice.net/study">"Design & Computation"</a> at <a target="_blank" class="btn-link" href="https://www.udk-berlin.de/">UDK</a>/<a target="_blank" class="btn-link" href="https://www.tu.berlin/">TU</a> Berlin.<br/>
-        Bachelor's degree in Computer Science with a minor in Experimental Physics from <a target="_blank" class="btn-link" href="https://www.lmu.de/en/">LMU</a> Munich.
-    </p>
+        <ProjectSubTitle>Inbetween fences</ProjectSubTitle>
+        <p class="pt-[3px] text-justify">
+            Having pursued a natural science-inspired education culminating in a bachelor’s degree in Computer Science with a minor in Experimental Physics at the <a target="_blank" class="btn-link" href="https://www.lmu.de/en/">Ludwig Maximilian University of Munich</a>, I have now turned to applying and intertwining my knowledge and methodologies with my interests in the arts, sciences, cultures, and technologies through my current master’s program, <a target="_blank" class="btn-link" href="https://www.newpractice.net/study">"Design & Computation"</a>. This joint program between the <a target="_blank" class="btn-link" href="https://www.udk-berlin.de/">University of the Arts Berlin</a> and the <a target="_blank" class="btn-link" href="https://www.tu.berlin/">Technical University Berlin</a> emphasizes creative collaboration across disciplines, fostering the development of new teaching and research formats. My recent work focuses on the implementation and broader implications of computational intelligence across various modalities, with particular emphasis on audio and cultural contexts.
+        </p>
     </div>
 )
 

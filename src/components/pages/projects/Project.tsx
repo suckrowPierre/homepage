@@ -4,11 +4,16 @@ import {Divider} from "../../Divider";
 
 
 export const ProjectTitle = ({children}:{children:any}) => (
-    <p class="col-span-full text-lg font-bold pb-4 uppercase">
+    <p class="col-span-full text-lg font-bold pb-4 uppercase h-fit md:h-28 lg:h-20">
         {children}
     </p>
 )
 
+export const ProjectSubTitle = ({children}:{children:any}) => (
+    <p class="col-span-full font-bold text-base h-fit md:h-28 lg:h-20">
+        {children}
+    </p>
+)
 const ProjectImage = ({src}:{src: string}) => (
     <img src={src} class={"col-span-full pb-4"} />
 )
@@ -23,7 +28,7 @@ export function chunkProjectArray(array, size) {
 
 export const ProjectElement = ({project}: {project: Project}) => (
     <div class="col-span-full md:col-span-1 md:row-start-1 md:row-end-4 md:grid md:grid-rows-subgrid text-justify md:gap-2">
-        <h1 class="col-span-full font-bold text-base">{project.title}</h1>
+        <ProjectSubTitle>{project.title}</ProjectSubTitle>
             {project.image ? <ProjectImage src={project.image} /> : null}
         <div>
             <p class="pb-2">{project.longDescription ? project.longDescription : project.shortDescription}</p>
@@ -84,10 +89,10 @@ export const ProjectPageGrid = ({children}: {children: any}) => (
 
 export const ProjectPage = ({movingContent, staticContent}: {movingContent:any, staticContent:any}) => (
     <ProjectPageGrid>
-        <div class="grid grid-rows-subgrid row-start-1 row-end-3">
+        <div class="">
             {staticContent}
         </div>
-        <div class="col-span-3 md:overflow-y-auto no-scrollbar">
+        <div class="col-span-1 md:col-span-3 md:overflow-y-auto no-scrollbar">
             {movingContent}
         </div>
     </ProjectPageGrid>
