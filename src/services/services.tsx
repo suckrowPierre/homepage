@@ -5,6 +5,8 @@ import {SiteFrame} from "../components/SiteFrame";
 import {CV} from "../components/pages/CV";
 import {Photography, SinglePhotoView} from "../components/pages/Photography";
 import {findMediaFromPath} from "../data/imageCache";
+import {Legal} from "../components/pages/Legal";
+import {FourOFour} from "../components/pages/404";
 
 
 export const serviceBluePrint = async (HtmlToShow,...args) => {
@@ -38,12 +40,16 @@ export const cvService = async (...args) => {
 }
 
 export const legalService = async (...args) => {
-    return serviceBluePrint(() => (<p>Legal</p>), ...args);
+    return serviceBluePrint(Legal, ...args);
 }
 
 export const photographyService = async (...args) => {
     return serviceBluePrint(Photography, ...args);
 }
+
+export const notFoundService  = async (...args) => {
+    return serviceBluePrint(FourOFour, ...args);
+};
 
 export const imageViewService = async (...args) => {
     if (args.length > 0) {

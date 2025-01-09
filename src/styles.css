@@ -23,6 +23,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+        @apply font-bold;
+    }
+}
+
 @layer components {
     /*text-[#05f]*/
     .btn-link {
@@ -36,7 +42,7 @@
         @apply font-medium;
         @apply betterhover:hover:text-gray-700;
         @apply cursor-pointer;
-        @apply text-xl sm:text-2xl;
+        @apply text-base;
     }
 }
 

@@ -31,7 +31,7 @@ export const SiteFrame = ({children}: {children: any}) => {
                 <LoadMansoryAfterRequest />
             </Head>
             }
-            body={<Body class={"overscroll-none overflow-x-hidden overflow-none h-[100dvh] px-8 py-4 text-lg"} id="body" hx-ext="preload">
+            body={<Body class={"overscroll-none overflow-x-hidden overflow-none h-[100dvh] px-8 py-4 text-sm"} id="body" hx-ext="preload">
                     {children}
         </Body> }
         />

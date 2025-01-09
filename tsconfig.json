@@ -7,10 +7,6 @@
     "jsx": "react",
     "jsxFactory": "elements.createElement",
     "allowJs": true,
-    "paths": {
-      "elysiahyperkit": ["./node_modules/elysiahyperkit/dist/index.js"],
-      "elysiahyperkit/*": ["./node_modules/elysiahyperkit/dist/*"]
-    },
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

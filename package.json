@@ -6,15 +6,15 @@
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "@elysiajs/html": "^0.8.0",
     "@elysiajs/static": "^0.8.1",
     "@gtramontina.com/elysia-tailwind": "2.0.0",
     "elysia": "^0.8.17",
-    "elysiahyperkit": "link:elysiahyperkit",
-    "typed-html": "link:typed-html"
+    "elysiahyperkit": "^1.0.0",
+    "typed-html": "^3.0.1"
   },
   "scripts": {
     "refreshCache": "bun src/refreshCache.ts"

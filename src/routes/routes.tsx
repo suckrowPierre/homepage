@@ -2,7 +2,7 @@ import {Route, RequestType, Page} from "elysiahyperkit/routing";
 import {
     cvService, imageViewService,
     landingPageService,
-    legalService,
+    legalService, notFoundService,
     photographyService,
     projectService,
 } from "../services/services";
@@ -18,8 +18,8 @@ export const legal = new Page("/legal", legalService, "Legal Notice", true);
 
 export const projectPages: Route[] = [];
 
-export const photoAndVideoPage = new Page("/photography", photographyService, "Photography", true);
-projectPages.push(photoAndVideoPage);
+export const photoAndVideoPage = new Page("/archive", photographyService, "Media Archive", true);
+//projectPages.push(photoAndVideoPage);
 
 projectTypes.forEach(projectType => {
     const HtmlToShow = () => (<ProjectsSite projectType={projectType}/>);
@@ -36,4 +36,7 @@ export const nonProjectPages: Route[] = [homepage, cvPage];
 // for image view with the name of the image
 const imageView = new Route(RequestType.GET, "/image_view/*", imageViewService);
 
-export const routes = [...nonProjectPages, ...projectPages, legal, imageView];
+export const notFoundPage = new Page("*", notFoundService, "404 Not Found", false);
+
+
+export const routes = [...nonProjectPages, ...projectPages, legal, imageView, notFoundPage];
