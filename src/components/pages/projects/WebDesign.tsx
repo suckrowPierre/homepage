@@ -1,54 +1,30 @@
 import * as elements from "typed-html";
-import {Project} from "../../projects/projects";
-import {ProjectElement, ProjectTitle} from "./Project";
-import {
-    ongoingResearch,
-    publishedResearch,
-    ResearchProjects,
-    unpublishedResearch
-} from "../../projects/ResearchProjects";
-import {ContentGrid, ContentGridStaticFirstCol} from "../../SwissGrid";
-import {Divider} from "../../Divider";
-import {softwareProjects} from "../../projects/SoftwareProjects";
+import {ProjectElements, ProjectPage, ProjectSubTitle, ProjectTitle} from "./Project";
 import {webDesignProjects} from "../../projects/WebDesignProjects";
 
-//Dedicated to producing artistic work and conducting research through mediums such as photography, videography, sound design, as well as my academic background in computer science and physics.
+/*
+            If you're looking for a developer to create a lightweight, tailored web application that reflects a thoughtful and refined approach, I would be delighted to collaborate and bring your vision to life.        </p>
+ */
+
 const FirstText = () => (
-    <p class="">
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-    </p>
+    <div>
+        <ProjectSubTitle>A minimal approach</ProjectSubTitle>
+        <p class="pt-[3px] text-justify">
+            Through my past experience as a full-stack web developer, I became dissatisfied with bloated frameworks and solutions that introduce unnecessary complexity and bring overwhelming ecosystems. These often complicate projects beyond necessity, creating more obstacles than solutions. Embracing a love for minimalistic design, I began valuing clarity and functionality in my design language. Seeking to extend these principles beyond a website’s layout to the codebase of the application led me to pursue a tech stack that embodies these principles, focusing on clean, modular, and efficient development. <br/><br/>
+            Adopting the ideology behind HTMX, I carefully balance server-side and client-side rendering based on the specific needs of each component. By combining this approach with the speed and flexibility of modern JavaScript frameworks like Bun, I can develop custom solutions efficiently while adhering to modular design practices. To streamline development further, I created ElysiaHyperKit, an npm package containing reusable building blocks, allowing me to rapidly prototype and implement ideas across projects while maintaining consistency.
+        </p>
+    </div>
 )
-
-
-
-const Projects = () => {
-    if (webDesignProjects.length > 0) {
-        return (
-            <div>
-                <ProjectTitle>
-                    WebDesign
-                </ProjectTitle>
-                {
-                    webDesignProjects.map((project) => (
-                        <ProjectElement project={project} />
-                    )).join('')
-                }
-            </div>
-        )
-    } else return null
-}
 
 export const WebDesign = () => {
     return (
-        <ContentGridStaticFirstCol>
-            <div>
-                <FirstText />
-                <br/>
-                <br/>
-            </div>
-                <div class="w-full overflow-y-auto">
-                    <Projects/>
-                </div>
-        </ContentGridStaticFirstCol>
+        <ProjectPage
+            staticContent={[
+                <ProjectTitle>Webdesign</ProjectTitle>,
+                <FirstText />]}
+            movingContent={[
+                <ProjectElements projects={webDesignProjects} title={"Projects"}/>,
+            ]}
+        />
     )
 }

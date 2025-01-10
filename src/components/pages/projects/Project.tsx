@@ -14,8 +14,10 @@ export const ProjectSubTitle = ({children}:{children:any}) => (
         {children}
     </p>
 )
-const ProjectImage = ({src}:{src: string}) => (
-    <img src={src} class={"col-span-full pb-4"} />
+const ProjectImage = ({src}: {src: string}) => (
+    <div class="aspect-w-1 aspect-h-1 col-span-full pb-4">
+        <img src={src} class="w-full h-full object-cover" />
+    </div>
 )
 
 export function chunkProjectArray(array, size) {
@@ -76,7 +78,7 @@ export const ProjectElements = ({projects, title, divider=false}:{projects: Proj
 };
 
 export const ProjectElementsGridWrapper = ({children}: {children: any}) => (
-    <div class="grid grid-cols-3 grid-rows-auto overflow-y-auto no-scrollbar gap-8 mb-8">
+    <div class="grid grid-cols-3 grid-rows-auto overflow-y-auto no-scrollbar gap-8 mb-8 last:mb-0">
         {children}
     </div>
 )
