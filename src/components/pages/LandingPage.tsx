@@ -2,7 +2,7 @@ import * as elements from "typed-html";
 import {NavLink} from "../Navigation";
 import {email, github, instagram, researchGate} from "../../personalInfo";
 import {SwissGrid} from "../SwissGrid";
-import {homepage, legal, nonProjectPages, projectPages} from "../../routes/routes";
+import {homepage, legal, nonProjectPages, projectPages, siteInformation} from "../../routes/routes";
 import {optimizedImagePath} from "../../data/bucketImages";
 import {HtmxOrStaticLink} from "elysiahyperkit/templates";
 
@@ -82,6 +82,11 @@ export const Contacts = () => (
         </li>
         <li>
             <a class={"nav-link"} href={researchGate} target="_blank">ResearchGate</a>
+        </li>
+        <li>
+            <NavLink page={siteInformation}>
+                {siteInformation.title}
+            </NavLink>
         </li>
         <li>
             <NavLink page={legal}>

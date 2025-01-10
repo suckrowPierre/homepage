@@ -4,7 +4,7 @@ import {
     landingPageService,
     legalService, notFoundService,
     photographyService,
-    projectService,
+    projectService, siteInformationService,
 } from "../services/services";
 import {ProjectType, projectTypes} from "../components/projects/projects";
 import * as elements from "typed-html";
@@ -15,6 +15,7 @@ import {ProjectsSite} from "../components/pages/ProjectSite";
 export const homepage = new Page("/", landingPageService, "Homepage", false);
 const cvPage = new Page("/cv", cvService, "Cv", true);
 export const legal = new Page("/legal", legalService, "Legal Notice", true);
+export const siteInformation  = new Page("/site-information", siteInformationService, "Site Information", true);
 
 export const projectPages: Route[] = [];
 
@@ -39,4 +40,4 @@ const imageView = new Route(RequestType.GET, "/image_view/*", imageViewService);
 export const notFoundPage = new Page("*", notFoundService, "404 Not Found", false);
 
 
-export const routes = [...nonProjectPages, ...projectPages, legal, imageView, notFoundPage];
+export const routes = [...nonProjectPages, ...projectPages, legal, siteInformation, imageView, notFoundPage];

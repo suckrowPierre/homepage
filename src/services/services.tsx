@@ -7,6 +7,7 @@ import {Photography, SinglePhotoView} from "../components/pages/Photography";
 import {findMediaFromPath} from "../data/imageCache";
 import {Legal} from "../components/pages/Legal";
 import {FourOFour} from "../components/pages/404";
+import {SiteInformation} from "../components/pages/SiteInfromation";
 
 
 export const serviceBluePrint = async (HtmlToShow,...args) => {
@@ -46,6 +47,10 @@ export const legalService = async (...args) => {
 export const photographyService = async (...args) => {
     return serviceBluePrint(Photography, ...args);
 }
+
+export const siteInformationService  = async (...args) => {
+    return serviceBluePrint(SiteInformation, ...args);
+};
 
 export const notFoundService  = async (...args) => {
     return serviceBluePrint(FourOFour, ...args);

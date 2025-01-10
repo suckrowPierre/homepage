@@ -1,53 +1,25 @@
 import * as elements from "typed-html";
-import {Project} from "../../projects/projects";
-import {ProjectElement, ProjectTitle} from "./Project";
-import {
-    ongoingResearch,
-    publishedResearch,
-    ResearchProjects,
-    unpublishedResearch
-} from "../../projects/ResearchProjects";
-import {ContentGrid, ContentGridStaticFirstCol} from "../../SwissGrid";
-import {Divider} from "../../Divider";
+import {ProjectElements, ProjectPage, ProjectSubTitle, ProjectTitle} from "./Project";
 import {softwareProjects} from "../../projects/SoftwareProjects";
 
-//Dedicated to producing artistic work and conducting research through mediums such as photography, videography, sound design, as well as my academic background in computer science and physics.
 const FirstText = () => (
-    <p class="">
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-    </p>
+    <div>
+        <ProjectSubTitle>Evolving understandings</ProjectSubTitle>
+        <p class="pt-[3px] text-justify">
+            {`Developing an early interest in technology and information systems, I began to self-educate myself in all things related to computer science. This curiosity dictated my academic path through school and ultimately shaped my choice of a bachelor's degree in Computer Science with a minor in Experimental Physics from the <a target="_blank" class="text-link" href="https://www.lmu.de/en/">Ludwig Maximilian University of Munich</a>. I bring a strong theoretical foundation paired with practical knowledge across various topics, frameworks, and programming languages. Having started with Java, I now primarily work with Python and JavaScript/TypeScript, while also having experience in C++ and Haskell and continuing to deepen my expertise in these areas.`}
+        </p>
+    </div>
 )
-
-
-
-const Projects = () => {
-    if (softwareProjects.length > 0) {
-        return (
-            <div>
-                <ProjectTitle>
-                    Software Projects
-                </ProjectTitle>
-                {
-                    softwareProjects.map((project) => (
-                        <ProjectElement project={project} />
-                    )).join('')
-                }
-            </div>
-        )
-    } else return null
-}
 
 export const Software = () => {
     return (
-        <ContentGridStaticFirstCol>
-            <div>
-                <FirstText />
-                <br/>
-                <br/>
-            </div>
-                <div class="w-full overflow-y-auto">
-                    <Projects/>
-                </div>
-        </ContentGridStaticFirstCol>
+        <ProjectPage
+            staticContent={[
+                <ProjectTitle>Software</ProjectTitle>,
+                <FirstText />]}
+            movingContent={[
+                <ProjectElements projects={softwareProjects} title={"Projects"}/>,
+            ]}
+        />
     )
 }

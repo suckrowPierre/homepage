@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'Palace Script MT';
-    src: url('fonts/shit.otf') format('opentype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
     font-family: "Helvetica Neue";
     src: url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
     font-style: normal;
@@ -36,6 +29,16 @@
         @apply text-left;
         @apply betterhover:hover:no-underline;
         @apply cursor-pointer;
+    }
+
+    .text-link {
+        @apply underline;
+        @apply betterhover:hover:no-underline;
+        @apply cursor-pointer;
+        @apply pr-0;
+        @apply mr-0;
+        @apply leading-normal;
+        @apply tracking-normal;
     }
 
     .nav-link {

@@ -14,11 +14,18 @@ export const ProjectSubTitle = ({children}:{children:any}) => (
         {children}
     </p>
 )
-const ProjectImage = ({src}: {src: string}) => (
-    <div class="aspect-w-1 aspect-h-1 col-span-full pb-4">
-        <img src={src} class="w-full h-full object-cover" />
+const ProjectImage = ({src, link}: {src: string, link?: string | undefined}) => (
+    <div class="aspect-w-1 aspect-h-1 col-span-full pb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105">
+        {link ? (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                <img src={src} class="w-full h-full object-cover" />
+            </a>
+        ) : (
+            <img src={src} class="w-full h-full object-cover" />
+        )}
     </div>
 )
+
 
 export function chunkProjectArray(array, size) {
     const result = [];
@@ -31,7 +38,7 @@ export function chunkProjectArray(array, size) {
 export const ProjectElement = ({project}: {project: Project}) => (
     <div class="col-span-full md:col-span-1 md:row-start-1 md:row-end-4 md:grid md:grid-rows-subgrid text-justify md:gap-2">
         <ProjectSubTitle>{project.title}</ProjectSubTitle>
-            {project.image ? <ProjectImage src={project.image} /> : null}
+            {project.image ? <ProjectImage src={project.image} link={project.cvLink}/> : null}
         <div>
             <p class="pb-2">{project.longDescription ? project.longDescription : project.shortDescription}</p>
             {project.contributors ?
