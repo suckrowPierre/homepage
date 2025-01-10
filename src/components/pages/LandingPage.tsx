@@ -30,7 +30,7 @@ export const Title = () => {
     return (
         <HtmxOrStaticLink
             endpoint={homepage.endpoint}
-            class="absolute top-0 left-0 text-8xl sm:text-9xl pl-[-2px] md:mt-[-8px] md:mr-4 leading-[5.5rem] sm:leading-[6.5rem] font-medium w-fit cursor-pointer text-left relative h-fit"
+            class="absolute top-0 left-0 text-8xl sm:text-9xl pl-[-2px] md:mt-[-8px] md:mr-4 leading-[5.5rem] sm:leading-[6.5rem] font-medium w-fit cursor-pointer text-left relative h-fit z-[-10]"
             hx-target="#body" hx-push-url="true" preload="mouseover" preload-images="true">
             <p class="font-knight w-fit">Suckrow</p>
             <p class="font-knight w-fit">Pierre Louis</p>
