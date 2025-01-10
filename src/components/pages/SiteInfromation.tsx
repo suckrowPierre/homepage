@@ -1,5 +1,5 @@
 import {ContentFrame} from "../ContentFrame";
-import * as elements from "../../../../typed-html-hyperscript";
+import * as elements from "typed-html";
 import {ContentGrid} from "../SwissGrid";
 
 const AboutText = () => (

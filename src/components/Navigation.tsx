@@ -1,7 +1,7 @@
 import {Page} from "elysiahyperkit/routing";
 import {HtmxOrStaticLink, NavbarLink} from "elysiahyperkit/templates";
 import * as elements from "typed-html";
-import {homepage, photoAndVideoPage} from "../routes/routes";
+import {homepage} from "../routes/routes";
 import {Attributes} from "typed-html";
 
 

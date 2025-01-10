@@ -1,5 +1,5 @@
 import {Project} from "./projects";
-import * as elements from "../../../../typed-html-hyperscript";
+import * as elements from "typed-html";
 
 const IndustryRoundTable : Project = {
     title: "industry-roundtable.com",

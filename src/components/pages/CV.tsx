@@ -2,9 +2,7 @@ import {ContentFrame} from "../ContentFrame";
 import * as elements from "typed-html";
 import {email, github, linkedin} from "../../personalInfo";
 import {Attributes} from "typed-html";
-import {ProjectElement} from "./projects/Project";
 import {ongoingResearch, publishedResearch, ResearchProjects, unpublishedResearch} from "../projects/ResearchProjects";
-import {Project} from "../projects/projects";
 import {Divider} from "../Divider";
 import {softwareProjects} from "../projects/SoftwareProjects";
 import {webDesignProjects} from "../projects/WebDesignProjects";
@@ -138,6 +136,7 @@ const InfoBlock = ({children, ...attributes }: Attributes) => (
         <div class={"col-span-full lg:col-span-6"}>
         <p><a class="btn-link" href={`mailto:${email}`}>{email}</a></p>
         <p><a class="btn-link" href={github} target="_blank">{github}</a></p>
+            <p><a class="btn-link" href={linkedin} target="_blank">{linkedin}</a></p>
         </div>
         {children}
     </div>

@@ -6,7 +6,7 @@ import {
     photographyService,
     projectService, siteInformationService,
 } from "../services/services";
-import {ProjectType, projectTypes} from "../components/projects/projects";
+import { projectTypes} from "../components/projects/projects";
 import * as elements from "typed-html";
 import {ProjectsSite} from "../components/pages/ProjectSite";
 

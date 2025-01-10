@@ -10,15 +10,6 @@ const WaveGenSynth : Project = {
     image: "WaveGenSynth.jpg"
 }
 
-/*
-<Projekt title="WaveGenSynth" description="Synthesizer with Generative AI Sound Engine" link="https://github.com/suckrowPierre/WaveGenSynth"/>
-        <Projekt title="LatentAccounting" description="WebUI for usage of smart personal accounting through embeddings and latent spaces"
-                 link="https://github.com/suckrowPierre/LatentAccounting"/>
-        <Projekt title="Elysiahyperkit" description="A NPM package to build Webapps with Bun, Elysia, Hyperscript and HTMX"
-                 link="https://github.com/suckrowPierre/elysiahyperkit"/>
-        <Projekt title="Design & Computation Intranet" description="WebAPP for an Inventory and Guide Management System for the Design & Computation Intranet" />
- */
-
 const LatentAccounting :  Project = {
     title: "LatentAccounting",
     shortDescription: "WebUI for usage of smart personal accounting through embeddings and latent spaces",
