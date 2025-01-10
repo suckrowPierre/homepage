@@ -1,6 +1,7 @@
 import {Project} from "../../projects/projects";
 import * as elements from "typed-html";
 import {Divider} from "../../Divider";
+import {optimizedImagePath} from "../../../data/bucketImages";
 
 
 export const ProjectTitle = ({children}:{children:any}) => (
@@ -18,10 +19,10 @@ const ProjectImage = ({src, link}: {src: string, link?: string | undefined}) => 
     <div class="aspect-w-1 aspect-h-1 col-span-full pb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105">
         {link ? (
             <a href={link} target="_blank" rel="noopener noreferrer">
-                <img src={src} class="w-full h-full object-cover" />
+                <img src={optimizedImagePath("projectImages/"  + src,500,500)} class="w-full h-full object-cover" />
             </a>
         ) : (
-            <img src={src} class="w-full h-full object-cover" />
+            <img src={optimizedImagePath("projectImages/" + src,500,500)} class="w-full h-full object-cover" />
         )}
     </div>
 )

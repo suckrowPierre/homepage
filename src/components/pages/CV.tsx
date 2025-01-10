@@ -19,7 +19,7 @@ const CVElement = ({children}: {children: any}) => (
 )
 
 const TimeLineTitle = ({children, ...attributes }: Attributes) => (
-    <h2 class="text-lg font-bold pb-4" {...attributes}>
+    <h2 class="text-lg pb-4" {...attributes}>
         {children}
     </h2>
 )

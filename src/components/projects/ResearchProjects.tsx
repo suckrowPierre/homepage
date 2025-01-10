@@ -5,7 +5,7 @@ const MotivationalSpeech: Project = {
     longDescription: "Within the increasing popularity of fitness- and entrepreneurship in western subcultures, video clips of so-called motivational speech received millions of views across social media. Usually, those audiovisual artifacts show excerpts from presentations or interviews of people – in most cases male business leaders authors, and other influential figures – who narrate about the optimal instructions, principles, and strategies for success. Paired with epic and emotional background music, these videos should act as a vehicle for self-motivation and goal pursuit. With a primal target group of men, success is often tied to wealthiness, professional growth, or appeal to women while the same being obstructed by characteristics like weakness, fragility, or discontinuity. With motivational speech, a listener’s ultimate goal is to obtain and shape a mindset, which ensures them to be on the right path for achievement. Motivational speech emerges as a phenomenon in a society of self-optimization, embedded in the ethos of constant productivity, competition, and meritocracy. With Motivational Speech Synthesis, we aim to reflect the inherent patterns and attitudes of motivational speech. Correlating with the generalization process of one universal way to success, we use machine learning techniques to average webscraped motivational speech into a single voiced text-to-motivational-speech model. By doing so, we question a universal road to success, only defined and obtained by individual strength and the right mindset. With the introduction of a motivational factor, the model is capable of scaling the motivational speech prosody. Representing the promise of social mobility, this motivational factor aligns with phrases like “The harder you work, the more you can get”. Motivational Speech Synthesis addresses aspects of our work ethic and how we approach our goals and challenges in live.",
     shortDescription: "Single voiced text-to-motivational-speech model, reflecting the inherent patterns and attitudes around success and self-optimization.",
     isCurrent: true,
-    image: "public/projectImage/motivation.png",
+    image: "motivation.jpg",
     contributors: "Luis Küffner, Patrick Stecher, Nikolaj Wolff & Pierre-Louis Suckrow"
 
 }
@@ -15,7 +15,7 @@ const Mythologie : Project = {
     shortDescription: "Agent-based system, drawing from biology and natural computing, simulating myth transmission within diverse social and environmental contexts, illuminating how narratives transform and propagate over time.",
     longDescription: "The Mythologizer project investigates the creation and transmission of myths by integrating principles from biology and natural computing. Inspired by Julien D’Huy and Jean-Loïc Le Quellec’s genetic approaches to tracing myth evolution, Mythologizer conceptualizes myths as living entities composed of \"mythemes,\" their smallest narrative units that mutate as they are passed down. The project began with a non-digital transmission game using four myths from Russian mythologist Yuri Berezkin’s database, where participants could add, remove, mutate, or preserve mythemes. Each version of the myth was then passed to the next participant, simulating the evolutionary process of myths. This interactive methodology was documented through a short film and a website that tracked each myth’s transformations. In its latest phase, Mythologizer has evolved into a generative agent-based system that simulates myth transmission within various social and environmental contexts. Rather than focusing solely on myth fitness, the system models cultural dynamics by creating agents with specific attributes that influence how myths evolve. These agents transmit, mutate, reproduce, and \"die\" over time, with myth elements organized into expandable ontologies, thereby providing a comprehensive framework for understanding the dynamic evolution of myths.",
     isCurrent: true,
-    image: "public/projectImage/myth.png",
+    image: "myth.jpg",
     contributors: "Célestin Meunier, Lilli Kurth, Eman Safavi & Pierre-Louis Suckrow"
 }
 
@@ -24,7 +24,7 @@ const Swag : Project = {
     shortDescription: "Reflection on the reductionist design of current computational intelligence models by drawing inspiration from Information Aesthetics to quantify a person’s SWAG through them, while also exploring the origins of this cultural understanding within these \"Models of Culture.\"",
     longDescription: "Wanting to work on a project that conveys the reductionist design and tendencies of our current computational intelligence models and inspired by Information Aesthetics, we turned to quantifying the aesthetic value of a person's clothing. Approaching embedding spaces as \"Models of Culture\" rather than as models intended to replicate intelligence or undertake generative tasks allowed us to frame an approach in which we narrowed our case study to the subcultural phenomenon of SWAG. Having developed this initial approach—measuring a person’s SWAG through an image/text embedding space—we now turn to investigate whether this method is accurate in measuring a person’s SWAG and, if so, how this understanding emerged, while also uncovering any underlying biases.",
     isCurrent: true,
-    image: "public/projectImage/Swag.png",
+    image: "Swag.jpg",
     contributors: "Suzan Hanow & Pierre-Louis Suckrow"
 }
 
@@ -38,7 +38,7 @@ const DiffusionSynth: Project = {
     publicationDate: "2024",
     cvLink: "https://dl.acm.org/doi/10.1145/3677996.3678289",
     contributors: "Sylvia Rothe, Christoph Weber & Pierre-Louis Suckrow",
-    image: "public/projectImage/synth.png"
+    image: "synth.jpg"
 }
 
 
@@ -52,7 +52,7 @@ const LatentAccounting: Project = {
     publicationDate: "2024",
     cvLink: "https://www.researchgate.net/publication/385737688_WICKED_SOLUTIONS_Volume_1",
     contributors: "Daniel Hromada & Pierre-Louis Suckrow",
-    image: "public/projectImage/euro.png"
+    image: "euro.jpg"
 }
 
 export const ResearchProjects = [MotivationalSpeech, Mythologie, Swag, DiffusionSynth, LatentAccounting]

@@ -25,7 +25,7 @@ export const SiteFrame = ({children}: {children: any}) => {
             <Head title={"Pierre-Louis Suckrow"} authors={["Pierre-Louis Suckrow"]}>
                 <link href='./public/styles.css' rel='stylesheet' />
                 <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
-                <script src={'./public/photoMasonry.js'}></script>
+                <script src={'./public/js/photoMasonry.js'}></script>
                 <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"></script>
                 <link rel="icon" href="/public/cursor.ico" />
                 <LoadMansoryAfterRequest />

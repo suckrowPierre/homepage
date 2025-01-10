@@ -37,13 +37,20 @@ const ElysiaTailwind = () => (
     <a target="_blank" class="text-link" href="https://github.com/gtramontina/elysia-tailwind">Elysia Tailwind</a>
 )
 
+const MaceyJS = () => (
+    <a target="_blank" class="text-link" href="http://macyjs.com/">Macy.js</a>
+)
+const HTMXPreload = () => (
+    <a target="_blank" class="text-link" href="https://htmx.org/extensions/preload/#:~:text=The%20preload%20extension%20allows%20you,applications%20needs%20and%20use%20cases.">HTMX Preload Extension</a>
+)
+
 const BuildText = () => (
     <div>
         <p>
-            This site was build using <HTMX/>,<Elysia/>,<Bun/>,<TypedHTML/> via <ElysiaHyperKit/>.
+            {`This site was build using ${<HTMX/>}, ${<HTMXPreload/>},${<Elysia/>},${<Bun/>},${<TypedHTML/>},${<MaceyJS/>} via ${<ElysiaHyperKit/>}.`}
         </p>
         <p>
-            For styling <Tailwind/> is being used via the <ElysiaTailwind/> plugin.
+            {`For styling ${<Tailwind/>} is being used via the ${<ElysiaTailwind/>} plugin.`}
         </p>
         <p>
             Helvetica Neue together with the Chomsky font family is being used.

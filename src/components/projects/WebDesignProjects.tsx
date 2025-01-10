@@ -7,7 +7,7 @@ const IndustryRoundTable : Project = {
     cvLink: "https://industry-roundtable.com",
     links: [{text: "Page", url: "https://industry-roundtable.com"}],
     isCurrent: false,
-    image: "public/projectImage/industry.png"
+    image: "industry.jpg"
 }
 
 const MemorySpacesWebsite : Project = {
@@ -16,7 +16,7 @@ const MemorySpacesWebsite : Project = {
     cvLink: "https://memory-spaces.de/",
     links: [{text: "Page", url: "https://memory-spaces.de/"}],
     isCurrent: false,
-    image: "public/projectImage/memoryspaces2.png"
+    image: "memoryspaces_page.jpg"
 }
 
 const ThisPage : Project = {
@@ -25,7 +25,7 @@ const ThisPage : Project = {
     cvLink: "https://suckrowpierre.com/",
     links: [{text: "Page", url: "https://suckrowpierre.com/"}],
     isCurrent: false,
-    image: "public/projectImage/portfolio.png"
+    image: "portfolio.jpg"
 }
 
 export const webDesignProjects = [IndustryRoundTable, MemorySpacesWebsite, ThisPage]
