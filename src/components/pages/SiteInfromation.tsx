@@ -47,7 +47,7 @@ const HTMXPreload = () => (
 const BuildText = () => (
     <div>
         <p>
-            {`This site was build using ${<HTMX/>}, ${<HTMXPreload/>},${<Elysia/>},${<Bun/>},${<TypedHTML/>},${<MaceyJS/>} via ${<ElysiaHyperKit/>}.`}
+            {`This site was build using ${<HTMX/>}, ${<HTMXPreload/>}, ${<Elysia/>}, ${<Bun/>}, ${<TypedHTML/>}, ${<MaceyJS/>} via ${<ElysiaHyperKit/>}.`}
         </p>
         <p>
             {`For styling ${<Tailwind/>} is being used via the ${<ElysiaTailwind/>} plugin.`}
