@@ -47,7 +47,7 @@ const MemorySpaces : Project = {
 
 }
 
-export const softwareProjects = [Elysiahyperkit, WaveGenSynth, DC_Intra, MemorySpaces, LatentAccounting]
+export const softwareProjects = [Elysiahyperkit, WaveGenSynth, DC_Intra, MemorySpaces]
 
 
 

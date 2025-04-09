@@ -149,7 +149,7 @@ const Programming = () => (
             <thead>
             <tr class="text-left">
                 <th class={`w-[${CVTableLength}px] font-normal`}>Python</th>
-                <th class="font-normal">NumPy, Torch, TensorFlow, OpenCV, FastAPI, Conda, Jinja2, Pandas, Matplotlib, Pyo, Librosa</th>
+                <th class="font-normal">Pip, Conda, Poetry, Uv, NumPy, Torch, TensorFlow, OpenCV, FastAPI, Conda, Jinja2, Pandas, Matplotlib, Pyo, Librosa, Ollama, Pydantic, Typer </th>
             </tr>
             </thead>
             <tbody>
@@ -157,6 +157,12 @@ const Programming = () => (
                 <td>Javascript/<br/>Typescript</td>
                 <td>
                     Node, NPM, Bun, HTMX, Hyperscript, Elyia.js, Tailwind, React, Jest, PrismaDB, Three.js
+                </td>
+            </tr>
+            <tr>
+                <td>Hosting</td>
+                <td>
+                    Backblaze, Cloudflare, Fly.io, Render, Vercel, Strapi
                 </td>
             </tr>
             <tr>
@@ -221,13 +227,15 @@ export const Work = () => (
         <TimeLineTitle>
             Professional Experience
         </TimeLineTitle>
-        <TimeLineOccupation title="Student Assistant Design & Computation"
-                            role="IT Admin role, development of Intranet"
-                            startDate={new Date("2024-12")}
-                            firm="UDK" city="Berlin"/>
         <TimeLineOccupation title="Student Assistant Department of Communication in Social and Economic Contexts"
                             role="IT Admin role, co-development of internal network for Generative AI."
                             startDate={new Date("2024-05")}
+                            endDate={new Date("2025-3")}
+                            firm="UDK" city="Berlin"/>
+        <TimeLineOccupation title="Student Assistant Design & Computation"
+                            role="IT Admin role, development of Intranet"
+                            startDate={new Date("2024-12")}
+                            endDate={new Date("2025-1")}
                             firm="UDK" city="Berlin"/>
         <TimeLineOccupation title="Student Assistant in Digital Education and Artificial Intelligence"
                             role="Maintenance of AI Infrastructure, Development of AI Applications."

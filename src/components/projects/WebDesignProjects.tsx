@@ -28,7 +28,7 @@ const ThisPage : Project = {
     image: "portfolio.jpg"
 }
 
-export const webDesignProjects = [IndustryRoundTable, MemorySpacesWebsite, ThisPage]
+export const webDesignProjects = [IndustryRoundTable, ThisPage]
 
 
 
